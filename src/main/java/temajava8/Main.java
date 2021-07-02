@@ -6,8 +6,8 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        FileReader fileReader = new FileReader("C:\\User\\domnu\\Desktop\\JavaHomework\\TemeJavaGrupa6\\src\\main\\resources\\table.cvs");
-        FileWriter fileWriter = new FileWriter("C:\\User\\domnu\\Desktop\\JavaHomework\\TemeJavaGrupa6\\src\\main\\resources\\newtable.cvs");
+        FileReader fileReader = new FileReader("C:\\User\\domnu\\Desktop\\JavaHomework\\TemeJavaGrupa6\\src\\main\\resources\\list.cvs");
+        FileWriter fileWriter = new FileWriter("C:\\User\\domnu\\Desktop\\JavaHomework\\TemeJavaGrupa6\\src\\main\\resources\\newlist.cvs");
         Person.orderByMonthOfBirth(fileReader,"02",fileWriter);
     }
 }
