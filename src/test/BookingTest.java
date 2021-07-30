@@ -59,19 +59,23 @@ public class BookingTest extends TestCase {
 
     }
 
-    public void initializeAccomodationTable() {
-        bookingDAOImplementation.insertIntoAccomodation(new Accomodation("Double", "1 x double", 2, "bla bla double"));
-        bookingDAOImplementation.insertIntoAccomodation(new Accomodation("Double-Single", "2 x regular", 2, "bla bla 2 x regular"));
-        bookingDAOImplementation.insertIntoAccomodation(new Accomodation("Appartment", "1 x double + 1 couch", 2, "bla bla appartment"));
+  public static void initializeAccomodationTable() {
+        BookingDB bookingDB = new BookingDB();
+        BookingDAOImplementation bookingDAOImplementation = new BookingDAOImplementation(bookingDB);
+        bookingDAOImplementation.insertIntoAccomodation(new Accomodation("Double", "1 x double", 2, " double"));
+        bookingDAOImplementation.insertIntoAccomodation(new Accomodation("Double-Single", "2 x regular", 2, "regular"));
+        bookingDAOImplementation.insertIntoAccomodation(new Accomodation("Appartment", "1 x double + 1 couch", 2, "appartment"));
     }
 
-    public void initializeRoomFairTable() {
-        bookingDAOImplementation.insertIntoRoomFair(new RoomFair(80, "Winter"));
-        bookingDAOImplementation.insertIntoRoomFair(new RoomFair(100, "Spring-Autumn"));
-        bookingDAOImplementation.insertIntoRoomFair(new RoomFair(150, "Summer"));
-        bookingDAOImplementation.insertIntoRoomFair(new RoomFair(120, "Winter"));
-        bookingDAOImplementation.insertIntoRoomFair(new RoomFair(180, "Spring-Autumn"));
-        bookingDAOImplementation.insertIntoRoomFair(new RoomFair(250, "Summer"));
+    public static void initializeRoomFairTable() {
+        BookingDB bookingDB = new BookingDB();
+        BookingDAOImplementation bookingDAOImplementation = new BookingDAOImplementation(bookingDB);
+        bookingDAOImplementation.insertIntoRoomFair(new RoomFair(90, "Autumn"));
+        bookingDAOImplementation.insertIntoRoomFair(new RoomFair(110, "Spring-Autumn"));
+        bookingDAOImplementation.insertIntoRoomFair(new RoomFair(50, "Summer"));
+        bookingDAOImplementation.insertIntoRoomFair(new RoomFair(220, "Winter"));
+        bookingDAOImplementation.insertIntoRoomFair(new RoomFair(130, "Autumn"));
+        bookingDAOImplementation.insertIntoRoomFair(new RoomFair(150, "Summer")
     }
 
     public void initializeAccomodationFairRelationTable() {
